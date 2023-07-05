@@ -1,0 +1,105 @@
+
+/* Header */
+
+.header {
+    width: 100%;
+}
+
+.header_options {
+    display: flex;
+    position: sticky;
+    height: 4rem;
+    align-items: center;
+    background-color: #181818;
+    font-family: FFDINforPuma, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    color: white;
+    justify-content: flex-end;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__logo img {
+    height: 2rem;
+}
+
+.header__categories__dsktp{
+    display: none;
+}
+
+/* Sidebar */
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 9999;
+  }
+  
+  .sidebar {
+    position: fixed;
+    padding-right: 50px;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #f5f5f5;
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+    z-index: 10000;
+  }
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    padding: 1rem 1rem 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e0e0e0;
+}
+  .show-sidebar {
+    transform: translateX(10%);
+  }
+
+
+/* Desktop-view */
+
+@media (min-width: 768px){
+    .header > div{
+        height: 4.5rem;
+        padding: 0 3rem 0 3rem;
+    }
+
+    .header__logo img {
+        height: 2.7rem;
+    }
+
+    .header__categories__dsktp{
+        display: flex;
+        flex: 1;
+    }
+    
+    .header__categories__dsktp ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 5rem;
+        justify-content: flex-start;
+    }
+    
+    .header__categories__dsktp ul li {
+        margin-right: 3rem;
+        font-weight: 500;
+    }
+}
+
+  
